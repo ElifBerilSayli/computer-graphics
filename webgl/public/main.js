@@ -14,6 +14,9 @@ GPU
 - attach shaders to program
 draw
 */
+
+const matrix = mat4.create();
+console.log(matrix);
 const buffer = gl.createBuffer();
 const vertex = [
   0,1,0,
@@ -26,7 +29,7 @@ gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(vertex), gl.STATIC_DRAW);
 const colorBuffer = gl.createBuffer();
 const color = [
     1,0,0,
-    0,1,0,
+    1,1,0,
     0,0,1,
 ];
 gl.bindBuffer(gl.ARRAY_BUFFER,colorBuffer);
